@@ -24,7 +24,7 @@ Symfony 4 Boilerplate runs inside docker. In order to use it you must have Docke
 * Clone project from source
 
 ```bash
- git clone https://github.com/anarbayramov/symfony-2-boilerplate.git <project-name>
+ git clone https://github.com/anarbayramov/symfony-4-boilerplate.git <project-name>
 ```
 * Inside src create new .env file from .env.example
 ```bash
