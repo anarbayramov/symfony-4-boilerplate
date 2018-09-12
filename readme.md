@@ -26,9 +26,9 @@ Symfony 4 Boilerplate runs inside docker. In order to use it you must have Docke
 ```bash
  git clone https://github.com/anarbayramov/symfony-4-boilerplate.git <project-name>
 ```
-* Inside src create new .env file from .env.example
+* Inside www create new .env file from .env.example
 ```bash
- cp src/.env.example src/.env
+ cp www/.env.example www/.env
 ```
 
 * Edit .env file Please be aware that boilerplate does not allow any special characters or spaces on project name
