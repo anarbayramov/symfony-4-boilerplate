@@ -34,12 +34,6 @@ docker-compose -p $APP_NAME up -d mysql redis elasticsearch workspace
 printf "Generating self-signed SSL certificate for local development"
 docker exec -ti $APP_NAME"_workspace_1" openssl req -x509 -sha256 -newkey rsa:2048 -keyout certs/local.key -out certs/local.pem -days 1024 -nodes -subj '/CN=localhost'
 
-
-printf "Creating databsase"
-docker exec -it $APP_NAME"_mysql_1" mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS "$DB_DATABASE ||
-( printf "\e[31mDatabase creation failed this problem mostly happens when database name already in use" && exit 1 )
-
-
 printf "Installing nginx container"
 #docker-compose -p $APP_NAME build --no-cache nginx
 docker-compose -p $APP_NAME up -d nginx
